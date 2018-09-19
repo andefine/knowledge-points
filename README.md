@@ -6,4 +6,4 @@
 )
 
 ## Node.js
-* Node一些资源
+* [Node一些资源](./node/resource.md)
