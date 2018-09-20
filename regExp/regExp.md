@@ -1,4 +1,4 @@
-### * 正则实现trim
+### 正则实现trim
 ```
 function customTrim(str) {
   let reg = /^\s+|\s+$/g

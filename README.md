@@ -10,8 +10,7 @@
     * 《编写可维护的JavaScript》
 
 ## 正则
-- [正则实现trim](./regExp/regExp.md
-)
+- [正则实现trim](./regExp/regExp.md)
 
 ## Node.js
 - [Node一些资源](./node/resource.md)
