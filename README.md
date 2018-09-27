@@ -36,3 +36,10 @@
 
 ## Node.js
 - [Node一些资源](./node/resource.md)
+
+
+## 工具
+
+### sourceTree
+- 安装免登录(随便搜一篇文章)
+- 进入sourceTree之后一定要设置一下，“工具”->“选项”->“一般”->“SSH客户端”，改成 OpenSSH
