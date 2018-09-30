@@ -38,6 +38,10 @@
 - [Node一些资源](./node/resource.md)
 
 
+## 小程序
+- [小程序中使用sass](./minApp/useSass.md)
+
+
 ## 工具
 
 ### sourceTree
