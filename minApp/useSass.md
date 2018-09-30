@@ -2,94 +2,70 @@
 
 ## 在独立的页面目录下直接使用
 
-### 小程序基本项目结构
-|-- undefined
-    |-- .gitignore
+### 小程序项目基本结构
+```
+|-- andefine
     |-- app.js
     |-- app.json
     |-- app.wxss
     |-- gulpfile.js
-    |-- package-lock.json
     |-- package.json
     |-- project.config.json
-    |-- README.md
     |-- components
-    |   |-- star-score
-    |       |-- star-score.js
-    |       |-- star-score.json
-    |       |-- star-score.scss
-    |       |-- star-score.wxml
-    |       |-- star-score.wxss
-    |-- img
-    |   |-- icon _ sign in.png
-    |   |-- icon-arrow-down.png
-    |   |-- icon-collect-red.png
-    |   |-- icon-collect.png
-    |   |-- icon-join-the-trip.png
-    |   |-- icon-serve-car.png
-    |   |-- icon-serve-clock.png
-    |   |-- icon-serve-hot-water.png
-    |   |-- icon-serve-left-luggage.png
-    |   |-- icon-serve-meal-delivery.png
-    |   |-- icon-serve-restaurant.png
-    |   |-- icon-serve-safe-box.png
-    |   |-- icon-serve-stop.png
-    |   |-- icon-serve-wife.png
-    |   |-- intro-location@1x.png
-    |   |-- intro-phone@1x.png
-    |   |-- star-bright-half.png
-    |   |-- star-bright.png
-    |   |-- star-gray.png
-    |   |-- marker-freehand
-    |   |   |-- clock in point@2x.png
-    |   |   |-- eat point@2x.png
-    |   |   |-- general point@2x.png
-    |   |   |-- play point@2x.png
-    |   |   |-- public service point@2x.png
-    |   |   |-- public service point_small@2x.png
-    |   |   |-- scenic spot@2x.png
-    |   |   |-- shopping point@2x.png
-    |   |   |-- sleep point@2x.png
-    |   |   |-- trip point@2x.png
-    |   |-- marker-normal
-    |       |-- icon _ eat big.png
-    |       |-- icon _ hotel big.png
-    |       |-- icon _ landscape big.png
-    |       |-- icon _ landscape small.png
-    |       |-- icon _ piay big.png
-    |       |-- icon _ route big.png
-    |       |-- icon _ route small.png
-    |       |-- icon _ service.png
-    |       |-- icon _ shopping big.png
-    |       |-- icon _ sign in.png
+    |   |-- miao
+    |       |-- miao.js
+    |       |-- miao.json
+    |       |-- miao.scss
+    |       |-- miao.wxml
+    |       |-- miao.wxss
     |-- pages
-    |   |-- homestayDetail
-    |   |   |-- homestayDetail.js
-    |   |   |-- homestayDetail.json
-    |   |   |-- homestayDetail.wxml
-    |   |   |-- homestayDetail.wxss
     |   |-- index
     |   |   |-- index.js
     |   |   |-- index.json
     |   |   |-- index.scss
     |   |   |-- index.wxml
     |   |   |-- index.wxss
-    |   |-- logs
-    |   |   |-- logs.js
-    |   |   |-- logs.json
-    |   |   |-- logs.wxml
-    |   |   |-- logs.wxss
-    |   |-- scenic
-    |   |   |-- scenic.js
-    |   |   |-- scenic.json
-    |   |   |-- scenic.scss
-    |   |   |-- scenic.wxml
-    |   |   |-- scenic.wxss
-    |   |-- test
-    |       |-- test.js
-    |       |-- test.json
-    |       |-- test.scss
-    |       |-- test.wxml
-    |       |-- test.wxss
-    |-- utils
-        |-- util.js
+```
+
+### gulpfile.js
+```javascript
+const gulp = require('gulp')
+const sass = require('gulp-sass')
+const rename = require('gulp-rename')
+
+/**
+ * 项目中使用scss。将pages下每个页面的scss文件通过gulp-sass编译成css文件，然后将后缀名改为.wxss
+ */
+// pages目录下scss文件的编译及rename
+gulp.task('sass-pages', () => {
+  return gulp.src('./pages/**/*.scss')
+    .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+    .pipe(rename((path) => {
+      path.extname = '.wxss'
+    }))
+    .pipe(gulp.dest('./pages'))
+})
+
+// components目录下scss文件的编译及rename
+gulp.task('sass-components', () => {
+  return gulp.src('./components/**/*.scss')
+    .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+    .pipe(rename((path) => {
+      path.extname = '.wxss'
+    }))
+    .pipe(gulp.dest('./components'))
+})
+
+// 监控pages下每个页面的scss文件的改动，并实时执行 'sass' 任务
+gulp.task('sass:watch', () => {
+  gulp.watch('./pages/**/*.scss', ['sass-pages']) // 监控 pages 下的scss文件变化
+  gulp.watch('./components/**/*.scss', ['sass-components']) // 监控 components下的文件变化
+})
+
+// 开发环境下直接在项目目录的控制台输入 gulp 即可监控scss文件变化
+gulp.task('default', ['sass:watch'], () => {
+  console.log('gulp running...')
+})
+```
+
+### 更进一步，生产环境下将`wxml` `wxss` `json` `js`文件进行压缩处理。思考中( • ̀ω•́ )✧ 喵~
