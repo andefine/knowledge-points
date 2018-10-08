@@ -13,6 +13,9 @@
 ## 正则(regular expressions)
 - [正则实现trim](./regExp/regExp.md)
 
+## vue
+- [vue-cli 3.0基本使用方式](./vue/vue-cli-3.0-usage.md)
+
 ## npm (node package manager)
 ### 常用命令
   - `npm init`
