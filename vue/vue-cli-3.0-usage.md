@@ -63,4 +63,47 @@ vue create vue-cli-test
 
 整个项目结构和`vue-cli`2还是非常相似的，最主要的应该就是没有`build`和`config`这个`webpack`配置目录了。毕竟零配置。
 
-### vue.config.js
+## vue.config.js
+### vue-cli 3 中使用rem
+- 安装amfe-flexible和px2rem-loader
+手淘的`lib-flexible`升级成了`amfe-flexible`
+```shell
+npm i -S amfe-flexible px2rem-loader
+```
+
+- `src/main.js`引入`amfe-flexible`
+```javascript
+// main.js
+import 'amfe-flexible'
+```
+
+- 配置`vue.config.js`
+```javascript
+// vue.config.js
+module.exports = {
+  // 如何在vue-cli 3 中使用px2rem: 
+  // https://github.com/vuejs/vue-cli/issues/1706
+  chainWebpack: config => {
+    function generateLoaders (loader) {
+      config.module
+        .rule(loader)
+        .oneOf('vue')
+        .use('px2rem-loader')
+        .loader('px2rem-loader')
+        .before('postcss-loader')
+        .options({ remUnit: 75, remPrecision: 8 })
+        .end()
+      config.module
+        .rule(loader)
+        .oneOf('normal')
+        .use('px2rem-loader')
+        .loader('px2rem-loader')
+        // .before('postcss-loader')
+        .options({ remUnit: 75, remPrecision: 8 })
+        .end()
+    }
+    generateLoaders('css')
+    generateLoaders('scss')
+  }
+}
+```
