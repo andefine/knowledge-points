@@ -108,4 +108,31 @@ module.exports = {
 }
 ```
 
-### 如何使用scss公共模块时不用每个vue文件都引入
+### 如何使用scss公共模块时不用每个vue文件都引入[官方文档直达](https://cli.vuejs.org/guide/css.html#automatic-imports)
+- 安装style-resources-loader
+```shell
+npm i -D style-resources-loader
+```
+- 配置`vue.config.js`
+```javascript
+const path = require('path')
+
+module.exports = {
+  chainWebpack: config => {
+
+    const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
+    types.forEach(type => addStyleResource(config.module.rule('scss').oneOf(type)))
+    function addStyleResource (rule) {
+      rule.use('style-resource')
+        .loader('style-resources-loader')
+        .options({
+          patterns: [
+            path.resolve(__dirname, './src/styles/color.scss'),
+          ],
+        })
+    }
+    
+  }
+}
+```
+- 此时，每个`vue`文件就无需手动引入`./src/styles/color.scss`，就可以在其中使用`color.scss`中的变量、混合等
