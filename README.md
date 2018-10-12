@@ -40,6 +40,8 @@
 ## Node.js
 - [Node一些资源](./node/resource.md)
 
+## [glob匹配](https://github.com/andefine/knowledge-points/issues/1)
+
 
 ## 小程序
 - [小程序中使用sass](./minApp/useSass.md)
