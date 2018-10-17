@@ -1,3 +1,14 @@
+## html
+- a标签在移动端点击取消背景色
+```css
+a {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-user-select: none;
+  -moz-user-focus: none;
+  -moz-user-select: none;
+}
+```
+
 ## js
 
 ### 知识点
