@@ -38,6 +38,10 @@ a {
 ## 正则(regular expressions)
 - [正则实现trim](./regExp/regExp.md)
 
+
+## 计算机知识
+- [url](./CS/url.md)
+
 ## vue
 - [vue-cli 3.0基本使用方式](./vue/vue-cli-3.0-usage.md)
 - [各种各样的需求篇](./vue/demands.md)
