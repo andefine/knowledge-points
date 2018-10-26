@@ -11,6 +11,11 @@ a {
 
 - [a标签的love hate原则](./html/aLoveHate.md)
 
+
+## css
+- [:active伪类在苹果的手机端不起作用](./css/activeInSafari.md)
+
+
 ## js
 
 ### 知识点
