@@ -22,7 +22,7 @@ a {
 - [undefined和null](./js/undefined-null.md)
 - require和import
 - [encodeURI和encodeURIComponent](./js/encodeURI_encodeURIComponent.md)
-- cookie
+- [cookie](./js/cookie.md)
 
 ### 常见方法
 - [数组去重](./js/arrayDedulplication.md)
