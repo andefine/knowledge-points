@@ -18,6 +18,8 @@ a {
 
 ## js
 
+### [数组常用原生方法](./js/arrayMethods.md)
+
 ### 知识点
 - [undefined和null](./js/undefined-null.md)
 - require和import
