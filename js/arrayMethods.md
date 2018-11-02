@@ -8,6 +8,8 @@ arr.splice(start[, deleteCount[, item1[, item2[, ...]]]])
 
 ## `Array.prototype.sort`[mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
 
+返回值是排序后的数组，会改变原数组
+
 ```javascript
 arr.sort([compareFunction])
 ```
