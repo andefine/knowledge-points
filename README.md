@@ -25,6 +25,7 @@ a {
 - require和import
 - [encodeURI和encodeURIComponent](./js/encodeURI_encodeURIComponent.md)
 - [cookie](./js/cookie.md)
+- [content-type和dataType](./js/contenType_and_dataType.md)
 
 ### 常见方法
 - [数组去重](./js/arrayDedulplication.md)
