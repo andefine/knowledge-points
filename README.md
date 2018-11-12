@@ -49,6 +49,7 @@ a {
 
 
 ## 计算机知识
+- [URI](./CS/URI.md)
 - [url](./CS/url.md)
 
 ## vue
