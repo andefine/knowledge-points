@@ -85,6 +85,7 @@ a {
 
 ## 小程序
 - [小程序中使用sass](./minApp/useSass.md)
+- [封装小程序接口请求方法](./minApp/encapsulate-wx-request.md)
 
 
 ## 工具
