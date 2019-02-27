@@ -46,6 +46,7 @@ a {
 
 ## 正则(regular expressions)
 - [正则实现trim](./regExp/regExp.md)
+- [各种需求](./regExp/requirements.md)
 
 
 ## 计算机知识
