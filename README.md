@@ -20,6 +20,7 @@ a {
 ## js
 
 ### [数组常用原生方法](./js/arrayMethods.md)
+### [`ArrayBuffer`基本使用](./js/array-buffer.md)
 
 ### 知识点
 - [undefined和null](./js/undefined-null.md)
