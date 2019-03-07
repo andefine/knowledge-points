@@ -35,6 +35,9 @@ a {
 ### ES6
 - [解构赋值]()
 
+### 面向对象
+- [基本知识](./js/object-oriented/fundamental.md)
+
 ### 其他
 - 代码风格
   + [JavaScript Standard Style](https://standardjs.com/)
