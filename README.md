@@ -38,6 +38,9 @@ a {
 ### 面向对象
 - [基本知识](./js/object-oriented/fundamental.md)
 
+### demos
+- [轮播](./js/demos/carousel.md)
+
 ### 其他
 - 代码风格
   + [JavaScript Standard Style](https://standardjs.com/)
