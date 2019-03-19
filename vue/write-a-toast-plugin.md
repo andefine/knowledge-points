@@ -42,32 +42,17 @@ export default {
 
 然后我们只需要在需要使用到的页面组件中引入使用就行了，这里不再赘述。但是这样的方式对于这种使用率极高并且使用场景大多在js交互中就显得非常麻烦，我们的目的是像文章开头中那样使用:
 ```javascript
-this.$toast('I am a Toast')
+this.$toast('I am a toast')
 ```
 
 ## 组件如何变身为插件
 
-### 回忆杀
-当初我们学习`vue`阅读文档时是多么痛苦，理所当然的肯定见过下面这几行代码：
-```html
-<div id="app">
-  {{ message }}
-</div>
-```
-```javascript
-var app = new Vue({
-  el: '#app',
-  data: {
-    message: 'Hello Vue!'
-  }
-})
-```
-依照文档的说明，这是在创建一个`Vue`实例，每个`Vue`程序都是这样开始的。
-
-我们先来看一下`Vue`中插件的定义，文档: [Plugins](https://vuejs.org/v2/guide/plugins.html)。其中第四条就是我们接下来所使用的插件类型，在`Vue.prototype`上添加方法，这样我们就能向这样`this.$toast('...')`使用啦
+我们先来看一下`Vue`中插件的定义，文档: [Plugins](https://vuejs.org/v2/guide/plugins.html)。其中第四条就是我们接下来所使用的插件类型，在`Vue.prototype`上添加方法，这样我们就能像这样`this.$toast('...')`使用啦
 
 在相同位置新建`index.js`
 ```javascript
+// src/plugin/toast/index.js
+
 import Vue from 'vue'
 
 // 引入toast组件，作为 component options (组件选项)
@@ -83,26 +68,75 @@ import toastOptions from './toast.vue'
 const Toast = Vue.extend(toastOptions)
 
 function showToast (options = {}) {
+  // 下面这行的写法可以让我们在使用 `this.$toast()` 的时候，
+  // 可以直接传入一个字符串，也可以传入一个配置对象
   const message = typeof options === 'string' ? options : options.message
-  const duration = options.duration || 2000
+  const duration = options.duration || 3000
 
-  const toast = new Toast({
+  const instance = new Toast({
     el: document.createElement('div')
   })
 
-  toast.message = message
-  toast.show = true
+  instance.message = message
+  instance.show = true
 
-  document.body.appendChild(toast.$el)
+  document.body.appendChild(instance.$el)
 
   setTimeout(() => {
-    toast.show = false
+    instance.show = false
   }, duration)
 }
 
-function registryToast () {
+export default function () {
   Vue.prototype.$toast = showToast
 }
-
-export default registryToast
 ```
+`toast.vue`也作了一点修改，添加了过渡。没接触过的朋友可以去看看文档哦 [过渡和动画](https://vuejs.org/v2/guide/transitions.html)
+```html
+<template>
+  <transition name="fade">
+    <div class="toast" v-show="show">{{message}}</div>
+  </transition>
+</template>
+
+<script>
+export default {
+  props: {
+    message: String
+  },
+  data () {
+    return {
+      show: false
+    }
+  }
+}
+</script>
+
+<style>
+.toast {
+  /* ...和上面一样 不写了 */
+}
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+.fade-leave-to {
+  opacity: 0;
+}
+</style>
+
+```
+整个过程就是新建一个`Toast`实例，将实例添加到`body`中，然后设置定时器，一段时间后隐藏`toast`。
+
+接着在`main.js`中引入，在`new Vue()`之前`Vue.use()`
+```javascript
+// src/main.js
+import toastPlugin from './plugin/toast'
+Vue.use(toastPlugin)
+```
+*注意`Vue.use`是可以传入一个对象或一个函数的，可能我们大多看到的是传入类似`{install: function...}`这样的方式，当然也是可以直接传入函数的，所以我们在`src/plugin/toast/index.js`这里是直接导出一个函数的*
+
+这个时候我们就可以直接在页面组件中直接使用`this.$toast()`啦：
+
+![](https://github.com/andefine/knowledge-points/blob/master/vue/images/toast_01.gif?raw=true)
+
+到这里这个`toast`插件已经是可以正常使用了，但是也存在着一些问题
