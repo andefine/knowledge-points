@@ -58,7 +58,7 @@ import Vue from 'vue'
 // 引入toast组件，作为 component options (组件选项)
 import toastComponent from './toast.vue'
 
-// 文档是这样说的：
+// Vue.extend 在文档中是这样说的：
 // 使用基础 Vue 构造器，创建一个“子类”。参数是一个包含 组件选项 的对象。
 // Vue.extend 文档位置 https://vuejs.org/v2/api/#Vue-extend
 // 在这里 Vue.extend 会返回一个实例构造器，
@@ -148,7 +148,7 @@ Vue.use(toastPlugin)
 
 - 添加`toast`在页面中显示的位置，不用具体到像素级别，可以做到`top`、`middle`、`bottom`就行
 - 显示`toast`的时候可能还需要有一个`icon`，来向用户表示不同信息
-- 以上的代码中，每次调用`this.$toast`都会新建一个新的实例。平常的业务场景中，同时显示多个`toast`的需求应该不多，但是在使用过程中肯定是会在多个地方需要使用到的，那么使用多少次，我们岂不是就新建了这么多实例，该打该打。那么能不能二次使用呢
+- 以上的代码中，每次调用`this.$toast`都会新建一个新的实例。平常的业务场景中，同时显示多个`toast`的需求应该不多，但是在使用过程中肯定是会在多个地方需要使用到的，那么使用多少次，我们岂不是就新建了这么多实例，那么能不能二次使用呢
 
 直接上改进过的代码：
 ```html
