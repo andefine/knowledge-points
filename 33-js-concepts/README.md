@@ -5,3 +5,4 @@
 1.Call Stack
 
 - [x] Understanding Javascript Call Stack, Event Loops — Gaurav Pandvia
+- [x] Understanding the JavaScript Call Stack — Charles Freeborn
