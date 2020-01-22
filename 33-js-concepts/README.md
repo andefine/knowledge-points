@@ -8,3 +8,6 @@
 - [x] Understanding the JavaScript Call Stack — Charles Freeborn
 - [x] Javascript: What Is The Execution Context? What Is The Call Stack? — Valentino Gagliardi
   - [x] JavaScript Engines: How Do They Even Work? From Call Stack to Promise, (almost) Everything You Need to Know (这篇文章对于异步那块讲得挺好, 推荐的视频有动图解释, 值得一看)
+- [x] What is the JS Event Loop and Call Stack? — Jess Telford
+- [ ] Call Stack — MDN
+- [ ] Understanding Execution Context and Execution Stack in Javascript — Sukhjinder Arora
