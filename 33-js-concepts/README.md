@@ -2,7 +2,7 @@
 
 根据此项目 [`33-js-concepts`](https://github.com/leonardomso/33-js-concepts)
 
-#### 1.Call Stack
+#### 1. Call Stack
 
 - [x] Understanding Javascript Call Stack, Event Loops — Gaurav Pandvia
 - [x] Understanding the JavaScript Call Stack — Charles Freeborn
@@ -15,7 +15,7 @@
   - [ ] How JavaScript works: inside the V8 engine + 5 tips on how to write optimized code
 - [x] The Ultimate Guide to Execution Contexts, Hoisting, Scopes, and Closures in JavaScript — Tyler McGinnis
 
-#### 2.Primitive Types
+#### 2. Primitive Types
 
 - [ ] How numbers are encoded in JavaScript — Dr. Axel Rauschmayer
 - [x] What You Need to Know About JavaScript Number Type — Max Wizard K
@@ -26,3 +26,13 @@
 - [x] JavaScript data types and data structures — MDN
 - [x] Diving Deeper in JavaScripts Objects — Arfat Salman
 - [x] The differences between Object.freeze() vs Const in JavaScript — Bolaji Ayodeji
+
+#### 3. Value Types and Reference Types
+- [x] Explaining Value vs. Reference in Javascript — Arnav Aggarwal
+- [x] Understand Value and Reference Types in JavaScript — Zsolt Nagy
+- [ ] Primitive Types & Reference Types in JavaScript — Bran van der Meer
+- [x] Value Types, Reference Types and Scope in JavaScript — Ben Aston
+- [x] Back to roots: JavaScript Value vs Reference — Miro Koczka
+- [x] Grasp “By Value” and “By Reference” in JavaScript — Léna Faure
+
+`后面几篇文章大致扫了一眼，几乎差不多，不再记录`
