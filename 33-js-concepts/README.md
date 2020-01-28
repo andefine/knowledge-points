@@ -2,7 +2,7 @@
 
 根据此项目 [`33-js-concepts`](https://github.com/leonardomso/33-js-concepts)
 
-1.Call Stack
+#### 1.Call Stack
 
 - [x] Understanding Javascript Call Stack, Event Loops — Gaurav Pandvia
 - [x] Understanding the JavaScript Call Stack — Charles Freeborn
@@ -14,3 +14,15 @@
 - [x] How JavaScript Works: An Overview of the Engine, the Runtime, and the Call Stack — Alexander Zlatkov
   - [ ] How JavaScript works: inside the V8 engine + 5 tips on how to write optimized code
 - [x] The Ultimate Guide to Execution Contexts, Hoisting, Scopes, and Closures in JavaScript — Tyler McGinnis
+
+#### 2.Primitive Types
+
+- [ ] How numbers are encoded in JavaScript — Dr. Axel Rauschmayer
+- [x] What You Need to Know About JavaScript Number Type — Max Wizard K
+- [ ] What Every JavaScript Developer Should Know About Floating Point Numbers — Chewxy
+- [x] The Secret Life of JavaScript Primitives — Angus Croll
+- [x] Primitive Types — Flow
+- [x] (Not) Everything in JavaScript is an Object — Daniel Li
+- [x] JavaScript data types and data structures — MDN
+- [x] Diving Deeper in JavaScripts Objects — Arfat Salman
+- [x] The differences between Object.freeze() vs Const in JavaScript — Bolaji Ayodeji
