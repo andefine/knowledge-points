@@ -36,3 +36,14 @@
 - [x] Grasp “By Value” and “By Reference” in JavaScript — Léna Faure
 
 `后面几篇文章大致扫了一眼，几乎差不多，不再记录`
+
+#### 4. Implicit, Explicit, Nominal, Structuring and Duck Typing
+- [x] What you need to know about Javascript's Implicit Coercion — Promise Tochi
+- [x] JavaScript Type Coercion Explained — Alexey Samoshkin
+
+`这个板块主题，个人认为在实际开发中需要尽量避免，因此后续文章并没有继续往下看(虽然知道这个原理也很重要，但是莫的时间)`
+
+#### 5. == vs === vs typeof
+- [x] JavaScript Double Equals vs. Triple Equals — Brandon Morelli
+- [x] How to better check data types in JavaScript — Webbjocke
+- [ ] Checking for the Absence of a Value in JavaScript — Tomer Aberbach
