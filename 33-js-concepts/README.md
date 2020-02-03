@@ -47,3 +47,23 @@
 - [x] JavaScript Double Equals vs. Triple Equals — Brandon Morelli
 - [x] How to better check data types in JavaScript — Webbjocke
 - [ ] Checking for the Absence of a Value in JavaScript — Tomer Aberbach
+
+#### 6. Function Scope, Block Scope and Lexical Scope
+- [x] You Don't Know JS: Scope & Closures [Book] — Kyle Simpson
+- [x] JavaScript Functions — Understanding The Basics — Brandon Morelli
+- [x] The battle between Function Scope and Block Scope — Marius Herring
+- [x] Emulating Block Scope in JavaScript — Josh Clanton
+- [x] The Difference Between Function and Block Scope in JavaScript — Joseph Cardillo
+- [x] Understanding Scope and Context in JavaScript | Ryan Morr
+- [x] JavaScript Scope and Closures — Zell Liew
+- [x] Understanding Scope in JavaScript — Wissam Abirached
+- [x] Speaking JavaScript - Variables: Scopes, Environments, and Closures — Dr. Axel Rauschmayer
+- [x] Understanding Scope in JavaScript ― Hammad Ahmed
+- [x] When to use a function declaration vs. a function expression ― Amber Wilkie
+- [x] A JavaScript Fundamentals Cheat Sheet: Scope, Context, and “this” ― Alexandra Fren
+
+#### 7. Expression vs Statement
+- [x] All you need to know about Javascript's Expressions, Statements and Expression Statements — Promise Tochi
+- [x] Function Expressions vs Function Declarations — Paul Wilkins
+- [x] JavaScript Function — Declaration vs Expression — Ravi Roshan
+- [x] Function Declarations vs. Function Expressions — Mandeep Singh
