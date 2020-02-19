@@ -67,3 +67,9 @@
 - [x] Function Expressions vs Function Declarations — Paul Wilkins
 - [x] JavaScript Function — Declaration vs Expression — Ravi Roshan
 - [x] Function Declarations vs. Function Expressions — Mandeep Singh
+
+#### 8. IIFE, Modules and Namespaces
+- [x] Mastering Immediately-Invoked Function Expressions ― Chandra Gundamaraju
+- [x] Do ES6 Modules make the case of IIFEs obsolete?
+- [x] A 10 minute primer to JavaScript modules, module formats, module loaders and module bundlers ― Jurgen Van de Moere
+- [ ] Modules ― Exploring JS (太难了，没看下去)
