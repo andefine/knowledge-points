@@ -79,3 +79,7 @@
 
 #### 10. setTimeout, setInterval and requestAnimationFrame
 - [x] setTimeout and setInterval — JavaScript.Info
+- [x] Why not to use setInterval — Akanksha Sharma
+- [x] setTimeout VS setInterval — Develoger
+- [x] Using requestAnimationFrame — Chris Coyier
+- [x] Understanding JavaScript's requestAnimationFrame() — JavaScript Kit
