@@ -73,3 +73,9 @@
 - [x] Do ES6 Modules make the case of IIFEs obsolete?
 - [x] A 10 minute primer to JavaScript modules, module formats, module loaders and module bundlers ― Jurgen Van de Moere
 - [ ] Modules ― Exploring JS (太难了，没看下去)
+
+#### 9. Message Queue and Event Loop
+- [x] JavaScript Event Loop Explained — Anoop Raveendran
+
+#### 10. setTimeout, setInterval and requestAnimationFrame
+- [x] setTimeout and setInterval — JavaScript.Info
