@@ -83,3 +83,6 @@
 - [x] setTimeout VS setInterval — Develoger
 - [x] Using requestAnimationFrame — Chris Coyier
 - [x] Understanding JavaScript's requestAnimationFrame() — JavaScript Kit
+
+#### 11. JavaScript Engines
+- [x] JavaScript Engines — Jen Looper
